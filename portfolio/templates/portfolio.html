@@ -1,0 +1,20 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block contents %}
+  <!-- {% load static %} -->
+    <!-- <img src="{% static 'bg2.jpg' %}" height="400" alt=""> -->
+    <!-- <br> -->
+    {% for portfolio in portfolios.all %}
+        <br>
+        <div class="container">
+            <h1>{{portfolio.title}}</h1>
+            <p>{{portfolio.creat_at}}</p>
+            <img src="{{portfolio.image.url}}" height="400">
+            <p> {{portfolio.description}}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
